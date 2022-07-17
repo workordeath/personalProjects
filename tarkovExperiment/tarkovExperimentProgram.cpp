@@ -120,3 +120,37 @@ void dataSet::writeToData(){
               << presentKIA << " " << presentSurvivalRate << " " << presentDate << endl;
     writeFile.close();
 }
+
+/*
+getDifference()
+=======================
+this function gets the
+difference between
+the present data set
+and the initial data
+set from the start
+of the experiment.
+*/
+void dataSet::getDifference(){
+    //local variables
+    int cash;
+    double totalRaids, survived, kia, survRate;
+    //local constant variables
+    const double WIDTH = 18;
+    const char FILL = ' ';
+    const char LINE_FILL = '=';
+    //calculations
+    cash = presentCash - initialCash;
+    totalRaids = presentTotalRaids - initialTotalRaids;
+    survived = presentSurvived - initialSurvived;
+    kia = presentKIA - initialKilledInAction;
+    survRate = presentSurvivalRate - initialSurvivalRate;
+
+    cout << endl;
+
+    cout << left << setw(WIDTH) << setfill(FILL) << cash;
+    cout << left << setw(WIDTH) << setfill(FILL) << totalRaids;
+    cout << left << setw(WIDTH) << setfill(FILL) << survived;
+    cout << left << setw(WIDTH) << setfill(FILL) << kia;
+    cout << left << setw(WIDTH) << setfill(FILL) << survRate << endl;
+}
