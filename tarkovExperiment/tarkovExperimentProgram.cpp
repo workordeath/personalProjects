@@ -59,3 +59,35 @@ void dataSet::initialDataSet(){
     cout << left << setw(WIDTH) << setfill(FILL) << initialSurvivalRate;
     cout << left << setw(WIDTH) << setfill(FILL) << initialDate << endl;
 }
+
+/*
+readFromData()
+==========================
+this function will read
+from the text file
+holding the data/list
+and output it to the
+console.
+
+and as long as the text
+file has the data
+in a certain order, it
+will output to the
+console.
+*/
+void dataSet::readFromData(){
+    //local variables
+    const double WIDTH = 18;
+    const char FILL = ' ';
+    const char LINE_FILL = '=';
+    //local readFrom object
+    ifstream readFile("tarkovDataList.txt");
+    while (readFile >> presentCash >> presentTotalRaids >> presentSurvived >> presentKIA >> presentSurvivalRate >> presentDate){
+    cout << left << setw(WIDTH) << setfill(FILL) << presentCash;
+    cout << left << setw(WIDTH) << setfill(FILL) << presentTotalRaids;
+    cout << left << setw(WIDTH) << setfill(FILL) << presentSurvived;
+    cout << left << setw(WIDTH) << setfill(FILL) << presentKIA;
+    cout << left << setw(WIDTH) << setfill(FILL) << setprecision(2) << presentSurvivalRate;
+    cout << left << setw(WIDTH) << setfill(FILL) << presentDate << endl;
+    }
+}
