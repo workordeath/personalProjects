@@ -91,3 +91,32 @@ void dataSet::readFromData(){
     cout << left << setw(WIDTH) << setfill(FILL) << presentDate << endl;
     }
 }
+
+/*
+writeToData()
+=================================
+this function will add a new
+piece of data into the text
+file/data list in a certain
+order.
+*/
+void dataSet::writeToData(){
+    //ask user for input.
+    cout << "ENTER CURRENT AMOUNT OF RUBLES: ";
+    cin >> presentCash;
+    cout << "ENTER TOTAL RAIDS: ";
+    cin >> presentTotalRaids;
+    cout << "ENTER TOTAL RAIDS SURVIVED: ";
+    cin >> presentSurvived;
+    cout << "ENTER TODAYS DATE: ";
+    cin >> presentDate;
+    //calculation.
+    presentKIA = presentTotalRaids - presentSurvived;
+    presentSurvivalRate = presentSurvived / presentTotalRaids;
+
+    ofstream writeFile("tarkovDataList.txt", fstream::app);
+    //the fstream::app makes it where when you write to fill it will only add and not overwrite.
+    writeFile << presentCash << " " << presentTotalRaids << " " << presentSurvived << " "
+              << presentKIA << " " << presentSurvivalRate << " " << presentDate << endl;
+    writeFile.close();
+}
