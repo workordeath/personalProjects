@@ -2,6 +2,7 @@ main {
     display: flex;
 }
 
+/* header class */
 
 .header {
     display: flex;
@@ -11,5 +12,20 @@ main {
 
 .header{
     justify-content: center;
+    padding: 25px;
     margin: 0;
+}
+
+/* topSubject class */
+
+.topSubject {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    font-size: 25px;
+}
+
+.topSubject {
+    color: white;
+    background-color: black;
 }
