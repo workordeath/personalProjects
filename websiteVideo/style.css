@@ -1,0 +1,15 @@
+main {
+    display: flex;
+}
+
+
+.header {
+    display: flex;
+    color: white;
+    background-color: black;
+}
+
+.header{
+    justify-content: center;
+    margin: 0;
+}
