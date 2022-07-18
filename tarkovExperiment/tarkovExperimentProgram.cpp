@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <stdlib> //needed for system clear on windows computer
 using namespace std;
 
 class dataSet{
@@ -119,6 +120,7 @@ void dataSet::writeToData(){
     writeFile << presentCash << " " << presentTotalRaids << " " << presentSurvived << " "
               << presentKIA << " " << presentSurvivalRate << " " << presentDate << endl;
     writeFile.close();
+    system("CLS");
 }
 
 /*
