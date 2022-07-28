@@ -5,8 +5,8 @@ inputs from the user.
 
 the inputs being the following:
 
-	**capital** - *how much money the
-	user has.*
+	capital - how much money the
+	user has.
 
 	**stock price** - *the price of the
 	security the user will be investing
