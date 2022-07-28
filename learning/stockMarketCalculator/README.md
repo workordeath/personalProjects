@@ -1,4 +1,4 @@
-#STOCK_MARKET_CALCULATOR
+# STOCK_MARKET_CALCULATOR
 
 This program will be taking
 an input from the user.
